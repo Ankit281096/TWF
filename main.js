@@ -21,8 +21,8 @@ window.onload = function() {
     .then(function(response) {
          if (response === 'Not Found')
         {
-             window.alert("message");
-             window.location.replace("./test.html");
+             window.alert("Wrong IFSC Code.Enter Correct IFSC Code.");
+             window.location.href='./test.html';
         }
         // console.log(response);
         data=response;
@@ -40,19 +40,8 @@ window.onload = function() {
           }
     }).catch(function(err) {
         window.alert('Unable to fetch .. NETWORK ERROR');
-        window.location.replace("./test.html");
+        window.location.href='./test.html';
     }); 
 }
 
-
-
-
-
-// $(document).ready(function () {
-//     $.getJSON('data.json', function(data) {
-//         var tblRow = "<tr>" + "<td>" + data.ADDRESS + "</td>" + "</tr>"
-//          $(tblRow).appendTo("#detail tbody");
- 
-//  });
-//   });
   
