@@ -12,29 +12,26 @@
 <body>
     
 <header class="header">
-        
-         <div class="text-box">
-            <h1 class="heading-primary">
-                    <span class="heading-primary-main">BANK DETAILS</span>  
-            </h1>
-            <div class="cover">
-                    <div class="heading-primary-sub">
-                            <form method="get" action="C:\Users\user\Desktop\TWF\test1.html">
-                                    <label>IFSC CODE</label><br>
-                                    <input type="text" name="ifsc_bank" id="ifsc" placeholder="Enter the ifsc code"> 
-                                    <br>
-                                    <button type="submit" class="btn btn-white btn-animated">SUBMIT</button>
-                                </form>
+    <div class="text-box">
+        <h1 class="heading-primary">
+            <span class="heading-primary-main">BANK DETAILS</span>  
+        </h1>
+        <div class="cover">
+            <div class="heading-primary-sub">
+                <form method="get" action=".\test1.html">
+                    <label>IFSC CODE</label><br>
+                    <input type="text" name="ifsc_bank" id="ifsc" placeholder="Enter the ifsc code"> 
+                    <br>
+                    <button type="submit" class="btn btn-white btn-animated">SUBMIT</button>
+                    </form>
                     </div>
-            </div>
-           
+            </div>  
         </div>
         <script>
             window.onload = function(){
-                document.getElementById("ifsc").val="";
+                document.getElementById("ifsc").value="";
             }
-            
-        </script>
+            </script>
     </header>
   
 </body>

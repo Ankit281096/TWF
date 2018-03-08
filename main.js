@@ -11,27 +11,24 @@ window.onload = function() {
             return decodeURIComponent(results[2].replace(/\+/g, " "));
         }
         var ifsc=getParameterByName('ifsc_bank');
+        if(ifsc === '')
+        {
+            window.alert("Enter the IFSC Code");
+            window.location.replace("./test.html");
+        }
     fetch(`https://ifsc.razorpay.com/${ifsc}`, {
     method: 'get'
     }).then(resp=>resp.json())
     .then(function(response) {
          if (response === 'Not Found')
          {
-             window.alert('Wrong IFSC Code');
+             window.alert("message");
+             window.location.replace("./test.html");
         }
         // console.log(response);
         data=response;
          console.log(data);
-        // var table=document.getElementById('detail');
-        // row=table.insertRow(-1);
-        // var cell=row.insertCell(-1);
-        // cell.innerHTML=data.ADDRESS;
-        // var table=document.getElementById('detail');
-        // row=table.insertRow(-1);
-        // var cell=row.insertCell(-1);
-        // cell.innerHTML=data.RTGS;
-        // console.log('Address is',response.ADDRESS);
-        // document.getElementById("detail").innerHTML='<tr><td>'+data.ADDRESS +'</td></tr>'
+    
         document.getElementById("detail").innerHTML=showObject(data);
         function showObject(obj) {
             var result = "";
@@ -44,6 +41,7 @@ window.onload = function() {
           }
     }).catch(function(err) {
         window.alert('Unable to fetch .. NETWORK ERROR');
+        window.location.replace("./test.html");
     }); 
     
 
