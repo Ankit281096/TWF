@@ -3,19 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     
 </head>
 <body>
     
-<form method="get" action="C:\Users\user\Desktop\TWF\test1.html">
-    <label>ifsc</label>
-    <input type="text" name="ifsc_bank" id="ifsc">
-    <button type="submit">SUBMIT</button>
-</form>
-    
+<header class="header">
+        
+         <div class="text-box">
+            <h1 class="heading-primary">
+                    <span class="heading-primary-main">BANK DETAILS</span>  
+            </h1>
+            <div class="cover">
+                    <div class="heading-primary-sub">
+                            <form method="get" action="C:\Users\user\Desktop\TWF\test1.html">
+                                    <label>IFSC CODE</label><br>
+                                    <input type="text" name="ifsc_bank" id="ifsc" placeholder="Enter the ifsc code"> 
+                                    <br>
+                                    <button onclick=myfunction() type="submit" class="btn btn-white btn-animated">SUBMIT</button>
+                                </form>
+                    </div>
+            </div>
+           
+        </div>
+        <script>
+            
+                function myfunction(){
+                    document.getElementById("ifsc").val=;
+                }
+                
+            
+        </script>
+    </header>
   
 </body>
 </html>
