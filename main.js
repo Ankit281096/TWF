@@ -13,7 +13,7 @@ window.onload = function() {
     if(ifsc === '')
     {
         window.alert("Enter the IFSC Code");
-        window.location.replace("./test.html");
+        window.location.href='./index.html';
     }
     fetch(`https://ifsc.razorpay.com/${ifsc}`, {
     method: 'get'
@@ -22,7 +22,7 @@ window.onload = function() {
          if (response === 'Not Found')
         {
              window.alert("Wrong IFSC Code.Enter Correct IFSC Code.");
-             window.location.href='./test.html';
+             window.location.href='./index.html';
         }
         // console.log(response);
         data=response;
@@ -40,7 +40,7 @@ window.onload = function() {
           }
     }).catch(function(err) {
         window.alert('Unable to fetch .. NETWORK ERROR');
-        window.location.href='./test.html';
+        window.location.href='./index.html';
     }); 
 }
 
